@@ -4,28 +4,25 @@ This  is a Streamlit-based ATS (Applicant Tracking System) Resume Evaluation Too
 
 # Key Features
 Job Description Input:
-
 Allows users to input the job description to compare it against the uploaded resume.
+<br>
 Resume Upload:
-
 Accepts resumes in PDF format uploaded by the user.
 Uses PyMuPDF (fitz) to extract the first page of the uploaded PDF, converting it into a base64-encoded image to process it with the AI.
-Three Functionalities:
-
-Professional Evaluation:
-Reviews the resume against the job description.
+<br>
+# Three Functionalities:
+<br>
+ Professional Evaluation:Reviews the resume against the job description.
 Provides an evaluation on whether the candidate's profile aligns with the specified role, highlighting strengths and weaknesses.
-Skill Improvement Suggestions:
-Analyzes skill gaps.
+<br>
+ Skill Improvement Suggestions:Analyzes skill gaps.
 Offers recommendations on areas where the candidate can improve.
-Percentage Match:
-Calculates a percentage match between the resume and job description.
+Percentage Match: Calculates a percentage match between the resume and job description.
 Identifies missing keywords and provides final thoughts.
-AI Model Used:
-
-Google Generative AI (Gemini) is configured via API keys to generate content dynamically based on the inputs provided.
+<br>
+AI Model Used: Google Generative AI (Gemini) is configured via API keys to generate content dynamically based on the inputs provided.
+<br>
 Streamlit User Interface:
-
 Interactive UI for:
 Job description entry.
 Resume file upload.
@@ -33,30 +30,30 @@ Button-based functionality selection.
 Outputs results dynamically in the app.
 # Workflow
 PDF Handling:
-
 Upon uploading a PDF, the first page is extracted and converted into an image format using PyMuPDF.
 The image is encoded in Base64 for compatibility with the AI model.
+<br>
 AI-Powered Analysis:
-
 The app queries the Gemini model with:
 Job description text.
 Extracted PDF content (as an image).
 Custom prompts tailored to each button functionality.
+<br>
 Response Display:
-
 Displays results in the Streamlit interface, providing actionable insights based on the AI-generated response.
+<br>
 Prompts Used
 Professional Evaluation:
-
 Focuses on HR-style feedback.
 Reviews alignment of the resume with the job description.
 Highlights strengths and weaknesses.
+<br>
 Skill Improvement Suggestions:
 
 Identifies skill gaps.
 Provides guidance for further development to match the role.
 Percentage Match:
-
+<br>
 Calculates how well the resume matches the job description.
 Outputs:
 Matching percentage.
